@@ -110,7 +110,7 @@ p { margin: 0 0 1em; text-wrap: pretty; }
 }
 
 .brand { display: inline-flex; align-items: center; }
-.brand-logo { height: 120px; width: auto; }
+.brand-logo { height: 48px; width: auto; }
 
 .site-nav {
   display: flex;
