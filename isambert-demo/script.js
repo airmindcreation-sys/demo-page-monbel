@@ -13,43 +13,33 @@
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
   /* -----------------------------------------------------------
-     Slider de comparaison avant / après
+     Slider de comparaison avant / après — approche clip-path
      -----------------------------------------------------------
-     Pour chaque [data-comparison] :
-     - on suit le pointeur (souris + tactile)
-     - on met à jour la largeur du wrapper "before" et la position
-       de la poignée en pourcentage relatif au conteneur
-     - on ajuste également la largeur interne de l'image "before"
-       via une variable CSS pour que l'image ne soit pas étirée
-       (elle conserve l'échelle du conteneur)
+     Les deux images sont superposées en taille réelle (100%/100%).
+     Seul le clip-path de l'image "before" change : pas d'étirement
+     possible, alignement pixel-perfect garanti, comportement « rideau ».
      ----------------------------------------------------------- */
   const sliders = document.querySelectorAll("[data-comparison]");
 
   sliders.forEach(initComparisonSlider);
 
   function initComparisonSlider(slider) {
-    const wrapper = slider.querySelector(".img-before-wrapper");
     const handle = slider.querySelector(".slider-handle");
     const imgBefore = slider.querySelector(".img-before");
 
-    if (!wrapper || !handle) return;
+    if (!handle || !imgBefore) return;
 
     let dragging = false;
     let rect = null;
 
-    /** Met à jour la position en % (0–100). */
+    /** Met à jour la position en % (0–100).
+     *  Les deux images restent à 100% de largeur, fixes et alignées.
+     *  Seul le clip-path de l'image "before" change pour révéler l'image "after". */
     function setPosition(percent) {
-      // Bornes douces pour ne pas perdre la poignée
       const p = Math.max(0, Math.min(100, percent));
-      wrapper.style.width = p + "%";
+      imgBefore.style.clipPath = "inset(0 " + (100 - p) + "% 0 0)";
       handle.style.left = p + "%";
       handle.setAttribute("aria-valuenow", String(Math.round(p)));
-
-      // L'image "before" reste à l'échelle du conteneur :
-      // sa largeur en px = largeur du conteneur (et non du wrapper).
-      if (rect && imgBefore) {
-        imgBefore.style.width = rect.width + "px";
-      }
     }
 
     /** Convertit une position clientX en pourcentage relatif au conteneur. */
@@ -159,21 +149,14 @@
       e.preventDefault();
     });
 
-    /* -------- Recalcul du rect au resize -------- */
-    const onResize = function () {
+    /* -------- Recalcul du rect au resize (pour le drag) -------- */
+    window.addEventListener("resize", function () {
       rect = slider.getBoundingClientRect();
-      // Re-applique la position courante pour maintenir l'échelle interne de l'image
-      const current = parseFloat(handle.getAttribute("aria-valuenow") || "50");
-      setPosition(current);
-    };
-    window.addEventListener("resize", onResize);
+    });
 
     /* -------- Initialisation à 50% -------- */
-    // On attend que les images soient mesurables ; à défaut, on initialise quand même.
-    requestAnimationFrame(function () {
-      rect = slider.getBoundingClientRect();
-      setPosition(50);
-    });
+    rect = slider.getBoundingClientRect();
+    setPosition(50);
   }
 
   /* -----------------------------------------------------------

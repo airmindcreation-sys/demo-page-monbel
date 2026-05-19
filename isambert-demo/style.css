@@ -287,20 +287,12 @@ p { margin: 0 0 1em; text-wrap: pretty; }
   user-drag: none;
 }
 
-.img-before-wrapper {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 50%;
-  overflow: hidden;
-  pointer-events: none;
-  /* image-before reste à 100% du conteneur parent (.comparison-slider) */
-}
-
-/* On reset la taille de l'img-before pour qu'elle reste à l'échelle du slider */
-.img-before-wrapper .img-before {
-  width: var(--slider-width, 100%);
+/* L'image "before" est superposée à 100% de largeur, puis masquée à droite
+   via clip-path en fonction de la position du curseur. Comportement « rideau » :
+   les deux images restent fixes et alignées, seule la visibilité change. */
+.comparison-slider .img-before {
+  z-index: 1;
+  will-change: clip-path;
 }
 
 /* Poignée */
