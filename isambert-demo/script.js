@@ -1,5 +1,5 @@
 /* ============================================================
-   Airmind Création — Démo Groupe Isambert
+   Airmind Estate — Démo Groupe Isambert
    Script principal : sliders avant/après + petits utilitaires
    ============================================================ */
 

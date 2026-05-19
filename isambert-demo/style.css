@@ -1,5 +1,5 @@
 /* ============================================================
-   Airmind Création — Démo Groupe Isambert
+   Airmind Estate — Démo Groupe Isambert
    Feuille de style principale
    ============================================================ */
 
@@ -535,6 +535,12 @@ p { margin: 0 0 1em; text-wrap: pretty; }
 }
 
 .footer-contact a:hover { color: var(--color-accent); }
+
+.footer-contact .footer-address {
+  margin-top: var(--space-3);
+  color: #9C988D;
+  font-size: 0.875rem;
+}
 
 .footer-meta {
   font-size: 0.8125rem;
