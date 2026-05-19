@@ -265,7 +265,7 @@ p { margin: 0 0 1em; text-wrap: pretty; }
 .comparison-slider {
   position: relative;
   width: 100%;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 3 / 2;
   overflow: hidden;
   background: #ddd;
   user-select: none;
