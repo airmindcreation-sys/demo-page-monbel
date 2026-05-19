@@ -110,7 +110,7 @@ p { margin: 0 0 1em; text-wrap: pretty; }
 }
 
 .brand { display: inline-flex; align-items: center; }
-.brand-logo { height: 60px; width: auto; }
+.brand-logo { height: 120px; width: auto; }
 
 .site-nav {
   display: flex;
@@ -506,9 +506,9 @@ p { margin: 0 0 1em; text-wrap: pretty; }
 }
 
 .footer-logo {
-  height: 128px;
+  height: 256px;
   width: auto;
-  margin-bottom: var(--space-6);
+  margin-bottom: var(--space-8);
   filter: brightness(0) invert(1);
 }
 
