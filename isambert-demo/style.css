@@ -105,12 +105,12 @@ p { margin: 0 0 1em; text-wrap: pretty; }
   align-items: center;
   justify-content: space-between;
   gap: var(--space-6);
-  padding-top: var(--space-4);
-  padding-bottom: var(--space-4);
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .brand { display: inline-flex; align-items: center; }
-.brand-logo { height: 48px; width: auto; }
+.brand-logo { height: 120px; width: auto; }
 
 .site-nav {
   display: flex;
