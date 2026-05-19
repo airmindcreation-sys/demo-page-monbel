@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Airmind Création — Démonstration pour Groupe Isambert</title>
+  <meta name="description" content="Démonstration confidentielle Airmind Création : mise en valeur par IA d'un bien parisien haussmannien pour Groupe Isambert." />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Airmind Création — Démonstration Groupe Isambert" />
+  <meta property="og:description" content="Transformer un bien habité en proposition de vente. Démonstration sur un appartement parisien — réalisée en 48h." />
+  <meta property="og:image" content="assets/room_one_after.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Favicon (logo Airmind) -->
+  <link rel="icon" type="image/svg+xml" href="assets/logo-airmind.svg" />
+
+  <!-- Google Fonts : Cormorant Garamond (titres) + Inter (corps) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       HEADER
+       ============================================================ -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#" class="brand" aria-label="Airmind Création — Accueil">
+        <img src="assets/logo-airmind.svg" alt="Airmind Création" class="brand-logo" />
+      </a>
+      <nav class="site-nav" aria-label="Navigation principale">
+        <a href="#demonstration">Démonstration</a>
+        <a href="#videos">Vidéos</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ============================================================
+       HERO
+       ============================================================ -->
+  <section class="hero">
+    <div class="container">
+      <p class="eyebrow">Proposition confidentielle — Groupe Isambert</p>
+      <h1 class="hero-title">
+        Transformer un bien habité<br />
+        <em>en proposition de vente.</em>
+      </h1>
+      <p class="hero-sub">
+        Démonstration sur un appartement parisien — réalisée en 48&nbsp;h à partir de photos sources.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       DÉMONSTRATION — Sliders avant / après
+       ============================================================ -->
+  <section id="demonstration" class="section">
+    <div class="container">
+
+      <header class="section-head">
+        <p class="section-kicker">01 — Démonstration</p>
+        <h2 class="section-title">Avant <span class="slash">/</span> Après</h2>
+        <p class="section-intro">
+          Deux pièces d'un appartement haussmannien parisien, retravaillées à partir des photographies fournies. Faites glisser le curseur pour révéler la mise en valeur.
+        </p>
+      </header>
+
+      <!-- Pièce 1 -->
+      <article class="room">
+        <header class="room-head">
+          <p class="room-index">Pièce 01</p>
+          <h3 class="room-title">Salon principal</h3>
+        </header>
+
+        <div class="comparison-slider" data-comparison>
+          <img class="img-after" src="assets/room_one_after.png" alt="Salon principal — après mise en valeur" />
+          <div class="img-before-wrapper" style="width: 50%;">
+            <img class="img-before" src="assets/room-1-before.jpg" alt="Salon principal — état initial" />
+          </div>
+          <div class="slider-handle" style="left: 50%;" role="slider" tabindex="0" aria-label="Curseur de comparaison avant/après" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
+            <span class="handle-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="9 6 3 12 9 18"></polyline>
+                <polyline points="15 6 21 12 15 18"></polyline>
+              </svg>
+            </span>
+          </div>
+          <span class="label label-before">Avant</span>
+          <span class="label label-after">Après</span>
+        </div>
+
+        <p class="room-caption">
+          Désencombrement, harmonisation de la lumière et restitution des volumes — la pièce retrouve sa lecture haussmannienne.
+        </p>
+      </article>
+
+      <!-- Pièce 2 -->
+      <article class="room">
+        <header class="room-head">
+          <p class="room-index">Pièce 02</p>
+          <h3 class="room-title">Salle de réception</h3>
+        </header>
+
+        <div class="comparison-slider" data-comparison>
+          <img class="img-after" src="assets/room-2-after.png" alt="Salle de réception — après mise en valeur" />
+          <div class="img-before-wrapper" style="width: 50%;">
+            <img class="img-before" src="assets/room-2-before.jpg" alt="Salle de réception — état initial" />
+          </div>
+          <div class="slider-handle" style="left: 50%;" role="slider" tabindex="0" aria-label="Curseur de comparaison avant/après" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
+            <span class="handle-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="9 6 3 12 9 18"></polyline>
+                <polyline points="15 6 21 12 15 18"></polyline>
+              </svg>
+            </span>
+          </div>
+          <span class="label label-before">Avant</span>
+          <span class="label label-after">Après</span>
+        </div>
+
+        <p class="room-caption">
+          Mise en scène d'un espace de réception : mobilier épuré, palette tamisée, projection d'un usage clair pour l'acquéreur.
+        </p>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       VIDÉOS
+       ============================================================ -->
+  <section id="videos" class="section section-alt">
+    <div class="container">
+
+      <header class="section-head">
+        <p class="section-kicker">02 — Vidéos</p>
+        <h2 class="section-title">Vidéos générées</h2>
+        <p class="section-intro">
+          Deux livrables vidéo complètent la photographie : une transition animée avant/après, et une déambulation immersive dans le bien dénudé.
+        </p>
+      </header>
+
+      <div class="video-grid">
+
+        <article class="video-card">
+          <div class="video-frame">
+            <!-- Une fois le fichier déposé, retire data-src et remets-le en src="..." sur <source>, ou décommente simplement le <source> ci-dessous -->
+            <video
+              controls
+              preload="metadata"
+              poster="assets/room_one_after.png"
+              playsinline
+              data-src="assets/video-morph.mp4"
+            >
+              <!-- <source src="assets/video-morph.mp4" type="video/mp4" /> -->
+              Votre navigateur ne prend pas en charge la lecture vidéo HTML5.
+            </video>
+            <div class="video-placeholder" aria-hidden="true">
+              <span class="video-placeholder-label">Vidéo à venir</span>
+              <span class="video-placeholder-sub">assets/video-morph.mp4</span>
+            </div>
+          </div>
+          <h3 class="video-title">Transition Avant / Après</h3>
+          <p class="video-desc">
+            Morphing animé entre l'état initial et la version retravaillée — pensé pour les pages d'annonce et les réseaux.
+          </p>
+        </article>
+
+        <article class="video-card">
+          <div class="video-frame">
+            <video
+              controls
+              preload="metadata"
+              poster="assets/room-2-after.png"
+              playsinline
+              data-src="assets/video-denudee.mp4"
+            >
+              <!-- <source src="assets/video-denudee.mp4" type="video/mp4" /> -->
+              Votre navigateur ne prend pas en charge la lecture vidéo HTML5.
+            </video>
+            <div class="video-placeholder" aria-hidden="true">
+              <span class="video-placeholder-label">Vidéo à venir</span>
+              <span class="video-placeholder-sub">assets/video-denudee.mp4</span>
+            </div>
+          </div>
+          <h3 class="video-title">Déambulation — bien dénudé</h3>
+          <p class="video-desc">
+            Parcours fluide dans l'appartement vidé de son mobilier : lecture pure des volumes, lumières et perspectives.
+          </p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PROCESS
+       ============================================================ -->
+  <section id="process" class="section">
+    <div class="container">
+
+      <header class="section-head">
+        <p class="section-kicker">03 — Process</p>
+        <h2 class="section-title">Notre process</h2>
+        <p class="section-intro">
+          Un cycle court, pensé pour s'insérer dans le rythme d'une mise en marché.
+        </p>
+      </header>
+
+      <ol class="process-list">
+        <li class="process-step">
+          <span class="step-num">01</span>
+          <div class="step-body">
+            <h4 class="step-title">Brief &amp; sélection</h4>
+            <p class="step-text">Choix d'une ou deux pièces test à partir des photos sources que vous nous transmettez.</p>
+          </div>
+        </li>
+        <li class="process-step">
+          <span class="step-num">02</span>
+          <div class="step-body">
+            <h4 class="step-title">Livraison du test — 24&nbsp;h</h4>
+            <p class="step-text">Premier rendu photo et vidéo livré sous 24&nbsp;h pour validation de la direction artistique.</p>
+          </div>
+        </li>
+        <li class="process-step">
+          <span class="step-num">03</span>
+          <div class="step-body">
+            <h4 class="step-title">Validation &amp; contrat</h4>
+            <p class="step-text">Confirmation de la qualité, signature du contrat et versement de l'acompte.</p>
+          </div>
+        </li>
+        <li class="process-step">
+          <span class="step-num">04</span>
+          <div class="step-body">
+            <h4 class="step-title">Livraison finale — 48&nbsp;h</h4>
+            <p class="step-text">Traitement du bien complet livré sous 48&nbsp;h après acompte, en haute définition.</p>
+          </div>
+        </li>
+      </ol>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer id="contact" class="site-footer">
+    <div class="container footer-inner">
+
+      <div class="footer-brand">
+        <img src="assets/logo-airmind.svg" alt="Airmind Création" class="footer-logo" />
+        <p class="footer-tagline">Airmind Création — Paris</p>
+      </div>
+
+      <div class="footer-contact">
+        <p class="footer-label">Contact</p>
+        <p><a href="mailto:contact@airmind.fr">contact@airmind.fr</a></p>
+        <p><a href="tel:+33000000000">+33 (0)0 00 00 00 00</a></p>
+      </div>
+
+      <div class="footer-meta">
+        <p class="confidential">Document confidentiel</p>
+        <p>Destiné à Romain — Groupe Isambert</p>
+        <p class="copyright">© <span id="year"></span> Airmind Création. Tous droits réservés.</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
