@@ -21,7 +21,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="style.css?v=13" />
+  <link rel="stylesheet" href="style.css?v=14" />
 </head>
 <body>
 
@@ -145,12 +145,28 @@
       <div class="video-grid">
 
         <article class="video-card">
-          <div class="video-pair">
+          <h3 class="video-title">Déambulation — état initial</h3>
+          <p class="video-desc">
+            Parcours fluide dans l'appartement habité : lecture des volumes haussmanniens à partir des photos sources.
+          </p>
+
+          <div class="video-with-direction">
+            <div class="video-direction dir-normal" aria-hidden="true">
+              <span class="dir-label">Sens normal</span>
+              <span class="dir-line"></span>
+            </div>
             <div class="video-frame">
               <video controls preload="metadata" poster="assets/room_one_after.png" playsinline>
                 <source src="assets/before.mp4" type="video/mp4" />
                 Votre navigateur ne prend pas en charge la lecture vidéo HTML5.
               </video>
+            </div>
+          </div>
+
+          <div class="video-with-direction">
+            <div class="video-direction dir-reversed" aria-hidden="true">
+              <span class="dir-line"></span>
+              <span class="dir-label">Sens inversé</span>
             </div>
             <div class="video-frame">
               <video controls preload="metadata" poster="assets/room_one_after.png" playsinline>
@@ -159,19 +175,31 @@
               </video>
             </div>
           </div>
-          <h3 class="video-title">Déambulation — état initial</h3>
-          <p class="video-desc">
-            Parcours fluide dans l'appartement habité : lecture des volumes haussmanniens à partir des photos sources. Sens normal et sens inversé.
-          </p>
         </article>
 
         <article class="video-card">
-          <div class="video-pair">
+          <h3 class="video-title">Déambulation — bien dénudé</h3>
+          <p class="video-desc">
+            Parcours fluide dans l'appartement vidé de son mobilier : lecture pure des volumes, lumières et perspectives.
+          </p>
+
+          <div class="video-with-direction">
+            <div class="video-direction dir-normal" aria-hidden="true">
+              <span class="dir-label">Sens normal</span>
+              <span class="dir-line"></span>
+            </div>
             <div class="video-frame">
               <video controls preload="metadata" poster="assets/room-2-after.png" playsinline>
                 <source src="assets/after.mp4" type="video/mp4" />
                 Votre navigateur ne prend pas en charge la lecture vidéo HTML5.
               </video>
+            </div>
+          </div>
+
+          <div class="video-with-direction">
+            <div class="video-direction dir-reversed" aria-hidden="true">
+              <span class="dir-line"></span>
+              <span class="dir-label">Sens inversé</span>
             </div>
             <div class="video-frame">
               <video controls preload="metadata" poster="assets/room-2-after.png" playsinline>
@@ -180,10 +208,6 @@
               </video>
             </div>
           </div>
-          <h3 class="video-title">Déambulation — bien dénudé</h3>
-          <p class="video-desc">
-            Parcours fluide dans l'appartement vidé de son mobilier : lecture pure des volumes, lumières et perspectives. Sens normal et sens inversé.
-          </p>
         </article>
 
       </div>
