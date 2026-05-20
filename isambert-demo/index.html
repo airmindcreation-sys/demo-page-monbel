@@ -21,7 +21,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="style.css?v=11" />
+  <link rel="stylesheet" href="style.css?v=12" />
 </head>
 <body>
 
@@ -145,16 +145,24 @@
       <div class="video-grid">
 
         <article class="video-card">
-          <div class="video-frame">
-            <video
-              controls
-              preload="metadata"
-              poster="assets/room_one_after.png"
-              playsinline
-            >
-              <source src="assets/before-reversed.mp4" type="video/mp4" />
-              Votre navigateur ne prend pas en charge la lecture vidéo HTML5.
-            </video>
+          <div class="video-with-controls">
+            <div class="video-frame">
+              <video
+                controls
+                preload="metadata"
+                poster="assets/room_one_after.png"
+                playsinline
+                data-default-speed="0.5"
+              >
+                <source src="assets/before-reversed.mp4" type="video/mp4" />
+                Votre navigateur ne prend pas en charge la lecture vidéo HTML5.
+              </video>
+            </div>
+            <aside class="video-speed" aria-label="Vitesse de lecture">
+              <p class="video-speed-label">Vitesse</p>
+              <button type="button" class="speed-btn is-active" data-speed="0.5">0.5×</button>
+              <button type="button" class="speed-btn" data-speed="1">1×</button>
+            </aside>
           </div>
           <h3 class="video-title">Déambulation — état initial</h3>
           <p class="video-desc">
@@ -163,16 +171,24 @@
         </article>
 
         <article class="video-card">
-          <div class="video-frame">
-            <video
-              controls
-              preload="metadata"
-              poster="assets/room-2-after.png"
-              playsinline
-            >
-              <source src="assets/after-reversed.mp4" type="video/mp4" />
-              Votre navigateur ne prend pas en charge la lecture vidéo HTML5.
-            </video>
+          <div class="video-with-controls">
+            <div class="video-frame">
+              <video
+                controls
+                preload="metadata"
+                poster="assets/room-2-after.png"
+                playsinline
+                data-default-speed="0.5"
+              >
+                <source src="assets/after-reversed.mp4" type="video/mp4" />
+                Votre navigateur ne prend pas en charge la lecture vidéo HTML5.
+              </video>
+            </div>
+            <aside class="video-speed" aria-label="Vitesse de lecture">
+              <p class="video-speed-label">Vitesse</p>
+              <button type="button" class="speed-btn is-active" data-speed="0.5">0.5×</button>
+              <button type="button" class="speed-btn" data-speed="1">1×</button>
+            </aside>
           </div>
           <h3 class="video-title">Déambulation — bien dénudé</h3>
           <p class="video-desc">
@@ -258,6 +274,6 @@
     </div>
   </footer>
 
-  <script src="script.js?v=3"></script>
+  <script src="script.js?v=12"></script>
 </body>
 </html>
