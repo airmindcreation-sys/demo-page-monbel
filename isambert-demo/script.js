@@ -169,39 +169,6 @@
     if (hasSource) frame.classList.add("has-video");
   });
 
-  /* -----------------------------------------------------------
-     Vidéos : contrôle de vitesse (0.5× par défaut)
-     ----------------------------------------------------------- */
-  document.querySelectorAll(".video-card").forEach(function (card) {
-    const video = card.querySelector("video");
-    const buttons = card.querySelectorAll(".speed-btn");
-    if (!video || !buttons.length) return;
-
-    function applySpeed(rate) {
-      video.defaultPlaybackRate = rate;
-      video.playbackRate = rate;
-      buttons.forEach(function (b) {
-        b.classList.toggle("is-active", parseFloat(b.dataset.speed) === rate);
-        b.setAttribute("aria-pressed", parseFloat(b.dataset.speed) === rate ? "true" : "false");
-      });
-    }
-
-    // Vitesse initiale (lue depuis data-default-speed, fallback 0.5)
-    const initial = parseFloat(video.dataset.defaultSpeed) || 0.5;
-    applySpeed(initial);
-
-    // Re-applique la vitesse après chargement des métadonnées (certains navigateurs
-    // réinitialisent playbackRate sur loadedmetadata)
-    video.addEventListener("loadedmetadata", function () {
-      video.playbackRate = video.defaultPlaybackRate;
-    });
-
-    buttons.forEach(function (btn) {
-      btn.addEventListener("click", function () {
-        applySpeed(parseFloat(btn.dataset.speed));
-      });
-    });
-  });
 
   /* -----------------------------------------------------------
      Smooth scroll explicite pour la nav (au cas où le navigateur
