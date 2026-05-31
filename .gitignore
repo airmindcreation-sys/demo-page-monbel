@@ -7,8 +7,7 @@ Thumbs.db
 # fichiers de travail (non destinés au site public)
 /before-2.mp4
 /before-*.mp4
-isambert-demo/assets/before-test.mp4
-isambert-demo/assets/*-test.mp4
+/assets/*-test.mp4
 
 # Sources Monbel (photos/vidéos brutes — trop lourdes pour le repo)
 /Monbel - dossier final/
