@@ -1,5 +1,5 @@
 /* ============================================================
-   Airmind Estate — Démo Groupe Isambert
+   Airmind Estate — Démo Monbel
    Feuille de style principale
    ============================================================ */
 
@@ -94,9 +94,7 @@ p { margin: 0 0 1em; text-wrap: pretty; }
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(250, 250, 247, 0.85);
-  backdrop-filter: saturate(140%) blur(12px);
-  -webkit-backdrop-filter: saturate(140%) blur(12px);
+  background: #ffffff;
   border-bottom: 1px solid var(--color-rule);
 }
 
@@ -109,8 +107,27 @@ p { margin: 0 0 1em; text-wrap: pretty; }
   padding-bottom: 0;
 }
 
-.brand { display: inline-flex; align-items: center; }
-.brand-logo { height: 120px; width: auto; }
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6em;
+  padding: var(--space-4) 0;
+  color: var(--color-ink);
+}
+
+.brand-logo {
+  height: 56px;
+  width: auto;
+  display: block;
+}
+
+.brand-name {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: 1.125rem;
+  letter-spacing: 0.02em;
+  line-height: 1;
+}
 
 .site-nav {
   display: flex;
@@ -565,11 +582,20 @@ p { margin: 0 0 1em; text-wrap: pretty; }
   align-items: start;
 }
 
-.footer-logo {
-  height: 256px;
-  width: auto;
-  margin-bottom: var(--space-8);
-  filter: brightness(0) invert(1);
+.footer-mark {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  line-height: 1;
+  color: #EDE7D7;
+  letter-spacing: -0.01em;
+  margin: 0 0 var(--space-8);
+}
+
+.footer-mark em {
+  font-style: italic;
+  color: var(--color-accent);
+  font-weight: 400;
 }
 
 .footer-tagline {

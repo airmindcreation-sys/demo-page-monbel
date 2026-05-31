@@ -9,3 +9,7 @@ Thumbs.db
 /before-*.mp4
 isambert-demo/assets/before-test.mp4
 isambert-demo/assets/*-test.mp4
+
+# Sources Monbel (photos/vidéos brutes — trop lourdes pour le repo)
+/Monbel - dossier final/
+/logo.png

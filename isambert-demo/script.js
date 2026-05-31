@@ -1,5 +1,5 @@
 /* ============================================================
-   Airmind Estate — Démo Groupe Isambert
+   Airmind Estate — Démo Monbel
    Script principal : sliders avant/après + petits utilitaires
    ============================================================ */
 
