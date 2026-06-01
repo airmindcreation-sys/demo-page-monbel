@@ -538,11 +538,18 @@ p { margin: 0 0 1em; text-wrap: pretty; }
   gap: var(--space-12);
 }
 
-.video-card { display: flex; flex-direction: column; }
+.video-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
 
-/* Titre / description placés AVANT les vidéos dans le card */
-.video-card .video-title { order: -2; }
-.video-card .video-desc  { order: -1; margin-bottom: var(--space-12); }
+/* Le texte (titre + description) reste en haut, la vidéo est poussée
+   en bas de la carte. Sur une grille 2 colonnes, cela aligne les deux
+   vidéos sur la même ligne horizontale même si les textes diffèrent. */
+.video-card .video-title { margin-bottom: var(--space-3); }
+.video-card .video-desc  { margin-bottom: var(--space-12); }
+.video-card .video-frame { margin-top: auto; }
 
 /* Bloc « indicateur de sens + vidéo », empilés verticalement */
 .video-with-direction {
