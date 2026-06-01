@@ -21,7 +21,80 @@
      ----------------------------------------------------------- */
   const sliders = document.querySelectorAll("[data-comparison]");
 
-  sliders.forEach(initComparisonSlider);
+  sliders.forEach(function (s) {
+    initComparisonSlider(s);
+    s.__compInit = true;
+  });
+
+  /* Auto-init des sliders ajoutés dynamiquement (ex. cloné dans la lightbox). */
+  if (window.MutationObserver) {
+    const obs = new MutationObserver(function (mutations) {
+      mutations.forEach(function (m) {
+        m.addedNodes.forEach(function (node) {
+          if (node.nodeType !== 1) return;
+          const items = node.matches && node.matches("[data-comparison]")
+            ? [node]
+            : (node.querySelectorAll ? Array.from(node.querySelectorAll("[data-comparison]")) : []);
+          items.forEach(function (s) {
+            if (!s.__compInit) {
+              initComparisonSlider(s);
+              s.__compInit = true;
+            }
+          });
+        });
+      });
+    });
+    obs.observe(document.body, { childList: true, subtree: true });
+  }
+
+  /* -----------------------------------------------------------
+     Lightbox d'agrandissement de slider
+     -----------------------------------------------------------
+     Clone le <article class="room"> cliqué dans le <dialog>.
+     Le MutationObserver ci-dessus init automatiquement le slider cloné.
+     Fermeture : bouton ×, touche Esc (native <dialog>), ou clic backdrop.
+     ----------------------------------------------------------- */
+  const zoomDialog = document.getElementById("zoom-dialog");
+  if (zoomDialog) {
+    const host = zoomDialog.querySelector(".zoom-host");
+
+    function openZoom(roomEl) {
+      if (!host || !roomEl) return;
+      const clone = roomEl.cloneNode(true);
+      // Pas de bouton agrandir dans la version agrandie
+      const innerExpand = clone.querySelector(".room-expand");
+      if (innerExpand) innerExpand.remove();
+      host.innerHTML = "";
+      host.appendChild(clone);
+      if (typeof zoomDialog.showModal === "function") {
+        zoomDialog.showModal();
+      } else {
+        zoomDialog.setAttribute("open", "");
+      }
+    }
+
+    document.addEventListener("click", function (e) {
+      const expandBtn = e.target.closest && e.target.closest(".room-expand");
+      if (expandBtn) {
+        e.preventDefault();
+        openZoom(expandBtn.closest(".room"));
+        return;
+      }
+      const closeBtn = e.target.closest && e.target.closest(".zoom-close");
+      if (closeBtn) {
+        zoomDialog.close();
+        return;
+      }
+      // Clic sur le backdrop : la cible directe est le <dialog> lui-même
+      if (e.target === zoomDialog) {
+        zoomDialog.close();
+      }
+    });
+
+    zoomDialog.addEventListener("close", function () {
+      if (host) host.innerHTML = "";
+    });
+  }
 
   function initComparisonSlider(slider) {
     const handle = slider.querySelector(".slider-handle");

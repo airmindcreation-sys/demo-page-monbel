@@ -21,7 +21,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="style.css?v=21" />
+  <link rel="stylesheet" href="style.css?v=22" />
 </head>
 <body>
 
@@ -54,141 +54,184 @@
         </p>
       </header>
 
-      <!-- Pièce 1 — Salon -->
-      <article class="room">
-        <header class="room-head">
-          <p class="room-index">Pièce 01</p>
-          <h3 class="room-title">Salon</h3>
-        </header>
+      <div class="rooms-grid">
 
-        <div class="comparison-slider" data-comparison>
-          <img class="img-after" src="assets/monbel-salon-after.jpg" alt="Salon — après mise en valeur" />
-          <img class="img-before" src="assets/monbel-salon-before.jpg" alt="Salon — état initial" style="clip-path: inset(0 50% 0 0);" />
-          <div class="slider-handle" style="left: 50%;" role="slider" tabindex="0" aria-label="Curseur de comparaison avant/après" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
-            <span class="handle-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="9 6 3 12 9 18"></polyline>
-                <polyline points="15 6 21 12 15 18"></polyline>
+        <!-- Pièce 1 — Salon -->
+        <article class="room">
+          <header class="room-head">
+            <p class="room-index">Pièce 01</p>
+            <h3 class="room-title">Salon</h3>
+            <button type="button" class="room-expand" aria-label="Agrandir le slider Salon">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <polyline points="9 21 3 21 3 15"></polyline>
+                <line x1="21" y1="3" x2="14" y2="10"></line>
+                <line x1="3" y1="21" x2="10" y2="14"></line>
               </svg>
-            </span>
+            </button>
+          </header>
+
+          <div class="comparison-slider" data-comparison>
+            <img class="img-after" src="assets/monbel-salon-after.jpg" alt="Salon — après mise en valeur" />
+            <img class="img-before" src="assets/monbel-salon-before.jpg" alt="Salon — état initial" style="clip-path: inset(0 50% 0 0);" />
+            <div class="slider-handle" style="left: 50%;" role="slider" tabindex="0" aria-label="Curseur de comparaison avant/après" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
+              <span class="handle-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="9 6 3 12 9 18"></polyline>
+                  <polyline points="15 6 21 12 15 18"></polyline>
+                </svg>
+              </span>
+            </div>
+            <span class="label label-before">Avant</span>
+            <span class="label label-after">Après</span>
           </div>
-          <span class="label label-before">Avant</span>
-          <span class="label label-after">Après</span>
-        </div>
 
-        <p class="room-caption">
-          Mobilier, lumière et matières installés virtuellement — la pièce vide devient un espace de réception habitable, lisible pour l'acquéreur.
-        </p>
-      </article>
+          <p class="room-caption">
+            Mobilier, lumière et matières installés virtuellement — la pièce vide devient un espace de réception habitable, lisible pour l'acquéreur.
+          </p>
+        </article>
 
-      <!-- Pièce 2 — Salle à manger -->
-      <article class="room">
-        <header class="room-head">
-          <p class="room-index">Pièce 02</p>
-          <h3 class="room-title">Salle à manger</h3>
-        </header>
-
-        <div class="comparison-slider" data-comparison>
-          <img class="img-after" src="assets/monbel-sam-after.jpg" alt="Salle à manger — après mise en valeur" />
-          <img class="img-before" src="assets/monbel-sam-before.jpg" alt="Salle à manger — état initial" style="clip-path: inset(0 50% 0 0);" />
-          <div class="slider-handle" style="left: 50%;" role="slider" tabindex="0" aria-label="Curseur de comparaison avant/après" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
-            <span class="handle-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="9 6 3 12 9 18"></polyline>
-                <polyline points="15 6 21 12 15 18"></polyline>
+        <!-- Pièce 2 — Salle à manger -->
+        <article class="room">
+          <header class="room-head">
+            <p class="room-index">Pièce 02</p>
+            <h3 class="room-title">Salle à manger</h3>
+            <button type="button" class="room-expand" aria-label="Agrandir le slider Salle à manger">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <polyline points="9 21 3 21 3 15"></polyline>
+                <line x1="21" y1="3" x2="14" y2="10"></line>
+                <line x1="3" y1="21" x2="10" y2="14"></line>
               </svg>
-            </span>
+            </button>
+          </header>
+
+          <div class="comparison-slider" data-comparison>
+            <img class="img-after" src="assets/monbel-sam-after.jpg" alt="Salle à manger — après mise en valeur" />
+            <img class="img-before" src="assets/monbel-sam-before.jpg" alt="Salle à manger — état initial" style="clip-path: inset(0 50% 0 0);" />
+            <div class="slider-handle" style="left: 50%;" role="slider" tabindex="0" aria-label="Curseur de comparaison avant/après" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
+              <span class="handle-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="9 6 3 12 9 18"></polyline>
+                  <polyline points="15 6 21 12 15 18"></polyline>
+                </svg>
+              </span>
+            </div>
+            <span class="label label-before">Avant</span>
+            <span class="label label-after">Après</span>
           </div>
-          <span class="label label-before">Avant</span>
-          <span class="label label-after">Après</span>
-        </div>
 
-        <p class="room-caption">
-          Grande table conviviale, suspension épurée, ouverture sur le salon — la circulation entre les pièces de vie reprend son sens.
-        </p>
-      </article>
+          <p class="room-caption">
+            Grande table conviviale, suspension épurée, ouverture sur le salon — la circulation entre les pièces de vie reprend son sens.
+          </p>
+        </article>
 
-      <!-- Pièce 3 — Cuisine -->
-      <article class="room">
-        <header class="room-head">
-          <p class="room-index">Pièce 03</p>
-          <h3 class="room-title">Cuisine</h3>
-        </header>
-
-        <div class="comparison-slider" data-comparison>
-          <img class="img-after" src="assets/monbel-cuisine-after.jpg" alt="Cuisine — après mise en valeur" />
-          <img class="img-before" src="assets/monbel-cuisine-before.jpg" alt="Cuisine — état initial" style="clip-path: inset(0 50% 0 0);" />
-          <div class="slider-handle" style="left: 50%;" role="slider" tabindex="0" aria-label="Curseur de comparaison avant/après" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
-            <span class="handle-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="9 6 3 12 9 18"></polyline>
-                <polyline points="15 6 21 12 15 18"></polyline>
+        <!-- Pièce 3 — Cuisine -->
+        <article class="room">
+          <header class="room-head">
+            <p class="room-index">Pièce 03</p>
+            <h3 class="room-title">Cuisine</h3>
+            <button type="button" class="room-expand" aria-label="Agrandir le slider Cuisine">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <polyline points="9 21 3 21 3 15"></polyline>
+                <line x1="21" y1="3" x2="14" y2="10"></line>
+                <line x1="3" y1="21" x2="10" y2="14"></line>
               </svg>
-            </span>
+            </button>
+          </header>
+
+          <div class="comparison-slider" data-comparison>
+            <img class="img-after" src="assets/monbel-cuisine-after.jpg" alt="Cuisine — après mise en valeur" />
+            <img class="img-before" src="assets/monbel-cuisine-before.jpg" alt="Cuisine — état initial" style="clip-path: inset(0 50% 0 0);" />
+            <div class="slider-handle" style="left: 50%;" role="slider" tabindex="0" aria-label="Curseur de comparaison avant/après" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
+              <span class="handle-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="9 6 3 12 9 18"></polyline>
+                  <polyline points="15 6 21 12 15 18"></polyline>
+                </svg>
+              </span>
+            </div>
+            <span class="label label-before">Avant</span>
+            <span class="label label-after">Après</span>
           </div>
-          <span class="label label-before">Avant</span>
-          <span class="label label-after">Après</span>
-        </div>
 
-        <p class="room-caption">
-          Électroménager, herbes fraîches, ustensiles : la cuisine fonctionnelle se transforme en pièce de vie chaleureuse — sans aucune intervention physique.
-        </p>
-      </article>
+          <p class="room-caption">
+            Électroménager, herbes fraîches, ustensiles : la cuisine fonctionnelle se transforme en pièce de vie chaleureuse — sans aucune intervention physique.
+          </p>
+        </article>
 
-      <!-- Pièce 4 — Chambre 1 -->
-      <article class="room">
-        <header class="room-head">
-          <p class="room-index">Pièce 04</p>
-          <h3 class="room-title">Chambre principale</h3>
-        </header>
-
-        <div class="comparison-slider" data-comparison>
-          <img class="img-after" src="assets/monbel-chambre1-after.jpg?v=4" alt="Chambre principale — après mise en valeur" />
-          <img class="img-before" src="assets/monbel-chambre1-before.jpg?v=4" alt="Chambre principale — état initial" style="clip-path: inset(0 50% 0 0);" />
-          <div class="slider-handle" style="left: 50%;" role="slider" tabindex="0" aria-label="Curseur de comparaison avant/après" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
-            <span class="handle-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="9 6 3 12 9 18"></polyline>
-                <polyline points="15 6 21 12 15 18"></polyline>
+        <!-- Pièce 4 — Chambre 1 -->
+        <article class="room">
+          <header class="room-head">
+            <p class="room-index">Pièce 04</p>
+            <h3 class="room-title">Chambre principale</h3>
+            <button type="button" class="room-expand" aria-label="Agrandir le slider Chambre principale">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <polyline points="9 21 3 21 3 15"></polyline>
+                <line x1="21" y1="3" x2="14" y2="10"></line>
+                <line x1="3" y1="21" x2="10" y2="14"></line>
               </svg>
-            </span>
+            </button>
+          </header>
+
+          <div class="comparison-slider" data-comparison>
+            <img class="img-after" src="assets/monbel-chambre1-after.jpg?v=4" alt="Chambre principale — après mise en valeur" />
+            <img class="img-before" src="assets/monbel-chambre1-before.jpg?v=4" alt="Chambre principale — état initial" style="clip-path: inset(0 50% 0 0);" />
+            <div class="slider-handle" style="left: 50%;" role="slider" tabindex="0" aria-label="Curseur de comparaison avant/après" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
+              <span class="handle-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="9 6 3 12 9 18"></polyline>
+                  <polyline points="15 6 21 12 15 18"></polyline>
+                </svg>
+              </span>
+            </div>
+            <span class="label label-before">Avant</span>
+            <span class="label label-after">Après</span>
           </div>
-          <span class="label label-before">Avant</span>
-          <span class="label label-after">Après</span>
-        </div>
 
-        <p class="room-caption">
-          Lit en bois clair, banc et linge naturel — la chambre principale gagne en sérénité, mise en valeur par la cheminée marbre et la baie en bow-window.
-        </p>
-      </article>
+          <p class="room-caption">
+            Lit en bois clair, banc et linge naturel — la chambre principale gagne en sérénité, mise en valeur par la cheminée marbre et la baie en bow-window.
+          </p>
+        </article>
 
-      <!-- Pièce 5 — Chambre 2 -->
-      <article class="room">
-        <header class="room-head">
-          <p class="room-index">Pièce 05</p>
-          <h3 class="room-title">Seconde chambre</h3>
-        </header>
-
-        <div class="comparison-slider" data-comparison>
-          <img class="img-after" src="assets/monbel-chambre2-after.jpg?v=3" alt="Seconde chambre — après mise en valeur" />
-          <img class="img-before" src="assets/monbel-chambre2-before.jpg?v=3" alt="Seconde chambre — état initial" style="clip-path: inset(0 50% 0 0);" />
-          <div class="slider-handle" style="left: 50%;" role="slider" tabindex="0" aria-label="Curseur de comparaison avant/après" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
-            <span class="handle-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="9 6 3 12 9 18"></polyline>
-                <polyline points="15 6 21 12 15 18"></polyline>
+        <!-- Pièce 5 — Chambre 2 -->
+        <article class="room">
+          <header class="room-head">
+            <p class="room-index">Pièce 05</p>
+            <h3 class="room-title">Seconde chambre</h3>
+            <button type="button" class="room-expand" aria-label="Agrandir le slider Seconde chambre">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <polyline points="9 21 3 21 3 15"></polyline>
+                <line x1="21" y1="3" x2="14" y2="10"></line>
+                <line x1="3" y1="21" x2="10" y2="14"></line>
               </svg>
-            </span>
+            </button>
+          </header>
+
+          <div class="comparison-slider" data-comparison>
+            <img class="img-after" src="assets/monbel-chambre2-after.jpg?v=3" alt="Seconde chambre — après mise en valeur" />
+            <img class="img-before" src="assets/monbel-chambre2-before.jpg?v=3" alt="Seconde chambre — état initial" style="clip-path: inset(0 50% 0 0);" />
+            <div class="slider-handle" style="left: 50%;" role="slider" tabindex="0" aria-label="Curseur de comparaison avant/après" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
+              <span class="handle-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="9 6 3 12 9 18"></polyline>
+                  <polyline points="15 6 21 12 15 18"></polyline>
+                </svg>
+              </span>
+            </div>
+            <span class="label label-before">Avant</span>
+            <span class="label label-after">Après</span>
           </div>
-          <span class="label label-before">Avant</span>
-          <span class="label label-after">Après</span>
-        </div>
 
-        <p class="room-caption">
-          Tête de lit habillée, plante et rideaux légers — la seconde chambre se projette comme une pièce d'amis ou un bureau, prête à accueillir.
-        </p>
-      </article>
+          <p class="room-caption">
+            Tête de lit habillée, plante et rideaux légers — la seconde chambre se projette comme une pièce d'amis ou un bureau, prête à accueillir.
+          </p>
+        </article>
 
+      </div>
     </div>
   </section>
 
@@ -213,31 +256,11 @@
           <p class="video-desc">
             Parcours fluide dans l'appartement vidé de son mobilier : lecture pure des volumes, lumières et perspectives.
           </p>
-
-          <div class="video-with-direction">
-            <div class="video-direction dir-normal" aria-hidden="true">
-              <span class="dir-label">Sens direct</span>
-              <span class="dir-line"></span>
-            </div>
-            <div class="video-frame">
-              <video controls preload="metadata" poster="assets/monbel-salon-before.jpg" playsinline>
-                <source src="assets/monbel-non-meuble.mp4" type="video/mp4" />
-                Votre navigateur ne prend pas en charge la lecture vidéo HTML5.
-              </video>
-            </div>
-          </div>
-
-          <div class="video-with-direction">
-            <div class="video-direction dir-reversed" aria-hidden="true">
-              <span class="dir-line"></span>
-              <span class="dir-label">Sens indirect</span>
-            </div>
-            <div class="video-frame">
-              <video controls preload="metadata" poster="assets/monbel-salon-before.jpg" playsinline>
-                <source src="assets/monbel-non-meuble-reversed.mp4" type="video/mp4" />
-                Votre navigateur ne prend pas en charge la lecture vidéo HTML5.
-              </video>
-            </div>
+          <div class="video-frame">
+            <video controls preload="metadata" poster="assets/monbel-salon-before.jpg" playsinline>
+              <source src="assets/monbel-non-meuble.mp4" type="video/mp4" />
+              Votre navigateur ne prend pas en charge la lecture vidéo HTML5.
+            </video>
           </div>
         </article>
 
@@ -246,31 +269,11 @@
           <p class="video-desc">
             Même parcours, projeté virtuellement avec mobilier, matières et accessoires : l'acquéreur se projette immédiatement dans son futur quotidien.
           </p>
-
-          <div class="video-with-direction">
-            <div class="video-direction dir-normal" aria-hidden="true">
-              <span class="dir-label">Sens direct</span>
-              <span class="dir-line"></span>
-            </div>
-            <div class="video-frame">
-              <video controls preload="metadata" poster="assets/monbel-salon-after.jpg" playsinline>
-                <source src="assets/monbel-meuble.mp4" type="video/mp4" />
-                Votre navigateur ne prend pas en charge la lecture vidéo HTML5.
-              </video>
-            </div>
-          </div>
-
-          <div class="video-with-direction">
-            <div class="video-direction dir-reversed" aria-hidden="true">
-              <span class="dir-line"></span>
-              <span class="dir-label">Sens indirect</span>
-            </div>
-            <div class="video-frame">
-              <video controls preload="metadata" poster="assets/monbel-salon-after.jpg" playsinline>
-                <source src="assets/monbel-meuble-reversed.mp4" type="video/mp4" />
-                Votre navigateur ne prend pas en charge la lecture vidéo HTML5.
-              </video>
-            </div>
+          <div class="video-frame">
+            <video controls preload="metadata" poster="assets/monbel-salon-after.jpg" playsinline>
+              <source src="assets/monbel-meuble.mp4" type="video/mp4" />
+              Votre navigateur ne prend pas en charge la lecture vidéo HTML5.
+            </video>
           </div>
         </article>
 
@@ -304,6 +307,17 @@
     </div>
   </footer>
 
-  <script src="script.js?v=14"></script>
+  <!-- Lightbox pour agrandir un slider -->
+  <dialog id="zoom-dialog" class="zoom-dialog" aria-label="Vue agrandie d'un slider avant/après">
+    <button type="button" class="zoom-close" aria-label="Fermer la vue agrandie">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+    <div class="zoom-host"></div>
+  </dialog>
+
+  <script src="script.js?v=15"></script>
 </body>
 </html>
