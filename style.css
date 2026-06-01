@@ -240,35 +240,74 @@ p { margin: 0 0 1em; text-wrap: pretty; }
 }
 
 /* -----------------------------------------------------------
-   Rooms (sliders) — grille compacte 5 col + lightbox
+   Rooms (sliders) — grille 3 col, dernière ligne centrée
    ----------------------------------------------------------- */
 .rooms-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: var(--space-6);
+  grid-template-columns: repeat(6, 1fr);
+  gap: var(--space-12) var(--space-8);
   margin-top: var(--space-12);
 }
 
-.room { margin-bottom: 0; }
+/* 5 items en 6 colonnes : 3 sur ligne 1 (span 2), 2 sur ligne 2 (centrés) */
+.rooms-grid > .room { grid-column: span 2; margin-bottom: 0; }
+.rooms-grid > .room:nth-child(4) { grid-column: 2 / span 2; }
+.rooms-grid > .room:nth-child(5) { grid-column: 4 / span 2; }
+
+.room { margin-bottom: var(--space-32); }
+.room:last-child { margin-bottom: 0; }
 
 .room-head {
   display: flex;
+  align-items: baseline;
+  gap: var(--space-6);
+  margin-bottom: var(--space-8);
+}
+
+/* En grille : header aplati, index masqué (les n° sont implicites) */
+.rooms-grid .room-head {
   align-items: center;
   justify-content: space-between;
   gap: var(--space-3);
-  margin-bottom: var(--space-3);
+  margin-bottom: var(--space-4);
   min-height: 1.6em;
 }
-
-.rooms-grid .room-index { font-size: 0.8125rem; }
-.rooms-grid .room-title { font-size: clamp(0.9rem, 1.05vw, 1.05rem); flex: 1; }
+.rooms-grid .room-index { display: none; }
+.rooms-grid .room-title {
+  flex: 1;
+  font-size: 1.0625rem;
+  line-height: 1.25;
+}
 .rooms-grid .room-caption { display: none; }
+
+/* En grille : labels Avant/Après et poignée discrétisés */
+.rooms-grid .label {
+  font-size: 0.5625rem;
+  letter-spacing: 0.18em;
+  padding: 4px 8px;
+  bottom: var(--space-3);
+}
+.rooms-grid .label-before { left: var(--space-3); }
+.rooms-grid .label-after  { right: var(--space-3); }
+
+.rooms-grid .handle-icon { width: 32px; height: 32px; }
+.rooms-grid .handle-icon svg { width: 14px; height: 14px; }
+
+/* Slider en grille : ombre + lift au survol pour inviter l'interaction */
+.rooms-grid .comparison-slider {
+  box-shadow: 0 1px 0 rgba(0,0,0,0.04), 0 12px 32px -18px rgba(26,26,26,0.22);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.rooms-grid .room:hover .comparison-slider {
+  transform: translateY(-2px);
+  box-shadow: 0 1px 0 rgba(0,0,0,0.04), 0 18px 40px -16px rgba(26,26,26,0.32);
+}
 
 /* Bouton « agrandir » */
 .room-expand {
   flex-shrink: 0;
-  width: 28px;
-  height: 28px;
+  width: 30px;
+  height: 30px;
   border: 1px solid var(--color-rule);
   background: transparent;
   color: var(--color-ink-soft);
@@ -764,14 +803,17 @@ p { margin: 0 0 1em; text-wrap: pretty; }
 /* -----------------------------------------------------------
    Responsive
    ----------------------------------------------------------- */
-@media (max-width: 1100px) {
-  .rooms-grid { grid-template-columns: repeat(3, 1fr); }
-}
-@media (max-width: 700px) {
-  .rooms-grid { grid-template-columns: repeat(2, 1fr); }
+/* Sous 880px : passage en 2 colonnes (annule le span 6-col) */
+@media (max-width: 880px) {
+  .rooms-grid { grid-template-columns: repeat(2, 1fr); gap: var(--space-8); }
+  .rooms-grid > .room,
+  .rooms-grid > .room:nth-child(4),
+  .rooms-grid > .room:nth-child(5) { grid-column: auto; }
   .video-grid { grid-template-columns: 1fr; }
 }
-@media (max-width: 440px) {
+
+/* Sous 500px : 1 colonne */
+@media (max-width: 500px) {
   .rooms-grid { grid-template-columns: 1fr; }
 }
 
